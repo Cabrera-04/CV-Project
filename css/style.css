@@ -12,6 +12,7 @@ body {
     "sobre-mi"
     "academico"
     "habilidades"
+    "idiomas"
     "familia"
     "hobbies"
     "futbol"
@@ -25,8 +26,8 @@ body {
 }
 
 body > * {
-    border: solid;
-  }
+  border: solid;
+}
 
 #overwatch > * {
   border: solid;
@@ -36,6 +37,7 @@ header {
   display: flex;
   grid-area: encabezado;
   justify-content: end;
+  background-color: aqua;
 }
 
 header p {
@@ -43,12 +45,10 @@ header p {
   font-size: 3vh;
 }
 
-
 /**ABOUT ME **/
 #about-me {
   display: flex;
   justify-content: start;
-  align-items: center;
   flex-wrap: wrap;
 
   grid-area: sobre-mi;
@@ -74,30 +74,40 @@ header p {
   object-fit: cover;
 }
 
-
 /** ACADEMIC **/
 #academic {
   flex-wrap: wrap;
   grid-area: academico;
 }
 
-#academic h2, #skills h2, #overwatch h2 {
+
+/** Subtitulos **/
+#academic h2,
+#skills h2,
+#overwatch h2,
+#valorant h2,
+#halo h2,#football h2 {
   font-size: 5vh;
   text-align: center;
-  
 }
+
+h2 img{
+  height: 32px;
+  width: 32px;
+}
+
+
 
 #academic li {
-    font-size: 4vh;
-    text-align: left;
-    margin-bottom: 10px;
-  }
-#academic img{
-    height: 600px;
-    width: 600px;
-    border-radius: 50%;
+  font-size: 4vh;
+  text-align: left;
+  margin-bottom: 10px;
 }
-
+#academic img {
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+}
 
 /** SKILLS**/
 #skills {
@@ -105,90 +115,170 @@ header p {
   flex-wrap: wrap;
   justify-content: center;
   grid-area: habilidades;
-  
 }
 
-
-#skills img{
+#skills img {
   height: 150px;
   width: 150px;
 }
 
-#tech{
+#tech {
   display: flex;
   flex-wrap: wrap;
 }
 
-#tech img{
+#tech img {
   margin: 100px;
 }
 
-#tech img:hover{
+#tech img:hover {
   transform: scale(1.5);
 }
+
+.titulo-clips, #subtitulo-futbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#subtitulo-hobbie-ow,#subtitulo-hobbie-val,#subtitulo-hobbie-halo, #subtitulo-idioma,#subtitulo-skills,#subtitulo-academic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+
+
+#subtitulo-futbol img, #subtitulo-hobbie-ow img,#subtitulo-hobbie-val img,#subtitulo-hobbie-halo img{
+  height: 50px;
+  width: 50px;
+
+}
 /** CLIPS **/
-#wm{
-  background-image: url(../img/wm-picture-2.png);
+
+iframe{
+  height: 100px;
+  width: 100px;
+}
+#wm {
+  background-image: url(../img/wm-picture-1.jpg);
   background-size: cover; /* Mantiene la imagen completa */
   background-position: center;
   background-repeat: no-repeat;
 }
 
-#tracer{
+#tracer {
   background-image: url(../img/tracer-picture-1.jpg);
   background-size: cover; /* Mantiene la imagen completa */
   background-position: center;
   background-repeat: no-repeat;
 }
 
-#pharah{
+#pharah {
   background-image: url(../img/pharah-picture-1.png);
   background-size: cover; /* Mantiene la imagen completa */
   background-position: center;
   background-repeat: no-repeat;
 }
 
-#dva{
+#dva {
   background-image: url(../img/dva-picture-1.jpg);
   background-size: cover; /* Mantiene la imagen completa */
   background-position: center;
   background-repeat: no-repeat;
 }
 
-#ashe{
+#ashe {
   background-image: url(../img/ashe-picture-1.jpg);
   background-size: cover; /* Mantiene la imagen completa */
   background-position: center;
   background-repeat: no-repeat;
 }
 
-#juno{
+#juno {
   background-image: url(../img/juno-picture-1.png);
   background-size: cover; /* Mantiene la imagen completa */
   background-position: center;
   background-repeat: no-repeat;
 }
 
+#viper {
+  background-image: url(../img/viper-picture-2.jpg);
+  background-size: cover; /* Mantiene la imagen completa */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#skye {
+  background-image: url(../img/skye-picture-2.jpg);
+  background-size: cover; /* Mantiene la imagen completa */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#halo-clip-1{
+  background-image: url(../img/halo-miniature.jpg);
+  background-size: cover; /* Mantiene la imagen completa */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#halo-clip-2{
+  background-image: url(../img/halo-miniature.jpg);
+  background-size: cover; /* Mantiene la imagen completa */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 #family {
   grid-area: familia;
+}
+
+#languages {
+  grid-area: idiomas;
+}
+
+#hobbies{
+  grid-area: hobbies;
 }
 
 #football {
   grid-area: futbol;
 }
 
-#overwatch h2 {
+/** Overwatch**/
+#overwatch #subtitulo-hobbie-ow {
   grid-area: subtitulo-jugadas-ow;
 }
 
-#valorant h2 {
+.titulo-clips img {
+  width: 50px;
+  height: 50px;
+}
+
+#overwatch div:not(:first-child),
+#valorant div:not(:first-child),
+#halo div:not(:first-child), #football{
+  display: grid;
+  place-items: center;
+}
+
+/** Valorant **/
+
+h3 {
+  background-color: aqua;
+}
+
+#valorant #subtitulo-hobbie-val {
   grid-area: subtitulo-jugadas-val;
 }
 
-#halo h2 {
+#halo #subtitulo-hobbie-halo {
   grid-area: subtitulo-jugadas-halo;
 }
 
+/** MEDIA QUERIES **/
 @media (min-width: 321px) and (max-width: 768px) {
   #overwatch {
     display: grid;
@@ -232,8 +322,8 @@ header p {
   #valorant {
     display: grid;
     grid-template-areas:
-      "subtitulo-jugadas-val subtitulo-jugadas-val subtitulo-jugadas-val subtitulo-jugadas-val "
-      "skye skye viper viper";
+      "subtitulo-jugadas-val subtitulo-jugadas-val"
+      "skye viper";
     grid-template-columns: auto;
     grid-template-rows: auto;
   }
@@ -241,7 +331,7 @@ header p {
   #halo {
     display: grid;
     grid-template-areas:
-      "subtitulo-jugadas-halo subtitulo-jugadas-halo subtitulo-jugadas-halo subtitulo-jugadas-halo"
-      "halo-clip-1 halo-clip-1 halo-clip-2 halo-clip-2";
+      "subtitulo-jugadas-halo subtitulo-jugadas-halo "
+      "halo-clip-1 halo-clip-2";
   }
 }
