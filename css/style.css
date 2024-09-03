@@ -80,23 +80,22 @@ header p {
   grid-area: academico;
 }
 
-
 /** Subtitulos **/
 #academic h2,
 #skills h2,
 #overwatch h2,
 #valorant h2,
-#halo h2,#football h2 {
+#halo h2,
+#football h2,
+#languages h2, #hobbies h2 {
   font-size: 5vh;
   text-align: center;
 }
 
-h2 img{
+h2 img {
   height: 32px;
   width: 32px;
 }
-
-
 
 #academic li {
   font-size: 4vh;
@@ -131,34 +130,70 @@ h2 img{
   margin: 100px;
 }
 
-#tech img:hover {
+#tech img:hover, #can-speak img:hover {
   transform: scale(1.5);
 }
 
-.titulo-clips, #subtitulo-futbol {
+.titulo-clips,
+#subtitulo-futbol {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#subtitulo-hobbie-ow,#subtitulo-hobbie-val,#subtitulo-hobbie-halo, #subtitulo-idioma,#subtitulo-skills,#subtitulo-academic{
+#subtitulo-hobbie-ow,
+#subtitulo-hobbie-val,
+#subtitulo-hobbie-halo,
+#subtitulo-idioma,
+#subtitulo-skills,
+#subtitulo-academic {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: aqua;
 }
 
-
-#subtitulo-futbol img, #subtitulo-hobbie-ow img,#subtitulo-hobbie-val img,#subtitulo-hobbie-halo img{
+#subtitulo-futbol img,
+#subtitulo-hobbie-ow img,
+#subtitulo-hobbie-val img,
+#subtitulo-hobbie-halo img,
+#subtitulo-academic img,
+#subtitulo-skills img,
+#subtitulo-idioma img {
   height: 50px;
   width: 50px;
-
 }
+
+#can-speak {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#english,
+#spanish {
+  display: flex;
+  align-items: center;
+}
+
+#english > *,
+#spanish > * {
+  margin: 10px;
+}
+
+#spanish img,
+#english img {
+  height: 50px;
+  width: 80px;
+}
+
+
+
 /** CLIPS **/
 
-iframe{
-  height: 100px;
-  width: 100px;
+iframe {
+  height: 50vh;
+  width: 80%;
 }
 #wm {
   background-image: url(../img/wm-picture-1.jpg);
@@ -216,20 +251,19 @@ iframe{
   background-repeat: no-repeat;
 }
 
-#halo-clip-1{
+#halo-clip-1 {
   background-image: url(../img/halo-miniature.jpg);
   background-size: cover; /* Mantiene la imagen completa */
   background-position: center;
   background-repeat: no-repeat;
 }
 
-#halo-clip-2{
+#halo-clip-2 {
   background-image: url(../img/halo-miniature.jpg);
   background-size: cover; /* Mantiene la imagen completa */
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 #family {
   grid-area: familia;
@@ -239,7 +273,7 @@ iframe{
   grid-area: idiomas;
 }
 
-#hobbies{
+#hobbies {
   grid-area: hobbies;
 }
 
@@ -259,7 +293,8 @@ iframe{
 
 #overwatch div:not(:first-child),
 #valorant div:not(:first-child),
-#halo div:not(:first-child), #football{
+#halo div:not(:first-child),
+#football {
   display: grid;
   place-items: center;
 }
@@ -335,3 +370,58 @@ h3 {
       "halo-clip-1 halo-clip-2";
   }
 }
+
+
+/** Carrusel **/
+
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 600px; /* Ajusta el tamaño máximo del carrusel */
+  overflow: hidden;
+  margin: 10px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-control.prev {
+  left: 0;
+}
+
+.carousel-control.next {
+  right: 0;
+}
+
+
+.carousel-item img {
+  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: 400px; /* Ajusta este valor según el tamaño que desees */
+  object-fit: cover; /* Asegura que la imagen cubra completamente el espacio asignado */
+}
+
+
+

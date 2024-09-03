@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js"></script>
     <title>CV</title>
   </head>
   <body>
@@ -24,46 +25,70 @@
       <img src="./img/profile-picture.jpeg" alt="" />
     </div>
 
-    <hr>
+    <hr />
 
     <div id="academic">
       <div id="subtitulo-academic">
+        <img src="./img/education.png" alt="" />
         <h2>Educación</h2>
-
       </div>
-      
+
       <ul>
-        <li>Broadstairs, England <br />
-          BEC BESPOKE ENGLISH COURSES - 2018</li>
-        <li>Universidad de la Amazonia, Florencia <br />
-          Ingeniería de Sistemas - 2021 - Actualidad <br /></li>
-    </ul>
-    
+        <li>
+          Broadstairs, England <br />
+          BEC BESPOKE ENGLISH COURSES - 2018
+        </li>
+        <li>
+          Universidad de la Amazonia, Florencia <br />
+          Ingeniería de Sistemas - 2021 - Actualidad <br />
+        </li>
+      </ul>
     </div>
 
     <div id="skills">
       <div id="subtitulo-skills">
+        <img src="./img/skill-icon.png" alt="" />
         <h2>Habilidades</h2>
-
       </div>
-      
+
       <div id="tech">
-        <img src="./img/html.png" alt="" title="HTML5">
-        <img src="./img/css.png" alt="" title="CSS">
-        <img src="./img/java.png" alt="" title="Java">
-        <img src="./img/python.png" alt="" title="Python">
-        <img src="./img/mysql.png" alt="" title="MySql">
-        <img src="./img/mongo.png" alt="" title="Mongo">
-        <img src="./img/power-bi.png" alt="" title="Power BI">        
-        <img src="./img/git.png" alt="" title="Git">
+        <img src="./img/html.png" alt="" title="HTML5" />
+        <img src="./img/css.png" alt="" title="CSS" />
+        <img src="./img/java.png" alt="" title="Java" />
+        <img src="./img/python.png" alt="" title="Python" />
+        <img src="./img/mysql.png" alt="" title="MySql" />
+        <img src="./img/mongo.png" alt="" title="Mongo" />
+        <img src="./img/power-bi.png" alt="" title="Power BI" />
+        <img src="./img/git.png" alt="" title="Git" />
       </div>
     </div>
 
     <div id="languages">
       <div id="subtitulo-idioma">
+        <img src="./img/language.png" alt="" />
         <h2>Idiomas</h2>
+      </div>
+
+      <div id="can-speak">
+
+        <div id="spanish">
+          <p>Español - Nativo</p>
+          <img src="./img/spanish.png" alt="">
+  
+  
+        </div>
+  
+        <div id="english">
+          <p>Inglés - B2</p>
+          <img src="./img/uk.jpg" alt="">
+  
+        </div>
 
       </div>
+
+      
+
+      
       
     </div>
 
@@ -72,140 +97,226 @@
       <p>Añadir arbol genealógico</p>
     </div>
 
-
     <div id="hobbies">
       <h2>Hobbies</h2>
     </div>
 
-
     <div id="football">
-
       <div id="subtitulo-futbol">
-        <img src="./img/football.png" alt="">
+        <img src="./img/football.png" alt="" />
         <h2>Fútbol</h2>
-        <img src="./img/gk.png" alt="">
+        <img src="./img/gk.png" alt="" />
       </div>
 
-      <img width=500px height=500px src="./img/fulvo.jpeg" alt="">
+
+      <p>Uno de mis hobbies ocasionales es jugar fútbol y de rol de arquero. Actualmente quizás no juego con la frecuencia con la que lo hacía antes pero es algo que aún disfruto mucho.</p>
+
+
+
+
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/carrusel-1.jpeg" alt="Imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/carrusel-2.jpeg" alt="Imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/carrusel-3.jpeg" alt="Imagen 3">
+          </div>
+
+          <div class="carousel-item">
+            <img src="./img/carrusel-4.jpeg" alt="Imagen 3">
+          </div>
+
+          <div class="carousel-item">
+            <img src="./img/carrusel-5.jpeg" alt="Imagen 3">
+          </div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+      </div>
+
       
     </div>
 
     <div id="overwatch">
       <div id="subtitulo-hobbie-ow">
-        <img src="./img/ow-icon.png" alt="">
-        <h2> Overwatch Highlights </h2>
-
+        <img src="./img/ow-icon.png" alt="" />
+        <h2>Overwatch Highlights</h2>
       </div>
-      
 
       <div id="wm">
         <div class="titulo-clips">
           <h3>Me gusta mucho jugar con Widowmaker</h3>
-        <img src="./img/widowmaker-icon-1.png" alt="">
+          <img src="./img/widowmaker-icon-1.png" alt="" />
         </div>
 
-        <iframe  src="https://www.youtube.com/embed/_0nAWPvKi_Y" title="widowmaker-clip-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
-        
+        <iframe
+          src="https://www.youtube.com/embed/_0nAWPvKi_Y"
+          title="widowmaker-clip-1"
+          rel="0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <div id="tracer">
         <div class="titulo-clips">
           <h3>Flanquear con Tracer</h3>
-        <img src="./img/tracer-icon-1.png" alt="">
+          <img src="./img/tracer-icon-1.png" alt="" />
         </div>
 
-        <iframe  src="https://www.youtube.com/embed/nz4OHdPVVCI" title="Tracer clip 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
-        
+        <iframe
+          src="https://www.youtube.com/embed/nz4OHdPVVCI"
+          title="Tracer clip 1"
+          rel="0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <div id="pharah">
         <div class="titulo-clips">
           <h3>Me gusta ser el "apoyo aereo"</h3>
-        <img src="./img/pharah-icon-1.png" alt="">
+          <img src="./img/pharah-icon-1.png" alt="" />
         </div>
-        <iframe  src="https://www.youtube.com/embed/x90w5TSTR4k" title="Pharah clip 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+        <iframe
+          src="https://www.youtube.com/embed/x90w5TSTR4k"
+          title="Pharah clip 1"
+          rel="0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <div id="dva">
         <div class="titulo-clips">
           <h3>DVA</h3>
-        <img src="./img/dva-icon-1.png" alt="">
+          <img src="./img/dva-icon-1.png" alt="" />
         </div>
-        <iframe  src="https://www.youtube.com/embed/2Kx2UsXCl6A" title="dva clip 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/2Kx2UsXCl6A"
+          title="dva clip 1"
+          rel="0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <div id="ashe">
         <div class="titulo-clips">
           <h3>Ashe</h3>
-          <img src="./img/ashe-icon-1.png" alt="">
+          <img src="./img/ashe-icon-1.png" alt="" />
         </div>
-        <iframe src="https://www.youtube.com/embed/E3cd4ss_ffw" title="ashe clip 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/E3cd4ss_ffw"
+          title="ashe clip 1"
+          rel="0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <div id="juno">
         <div class="titulo-clips">
           <h3>JUNO</h3>
-        <img src="./img/juno-icon-1.png" alt="">
+          <img src="./img/juno-icon-1.png" alt="" />
         </div>
-        <iframe  src="https://www.youtube.com/embed/Gulq-Xx8QW8" title="juno clip 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
-        
+        <iframe
+          src="https://www.youtube.com/embed/Gulq-Xx8QW8"
+          title="juno clip 1"
+          rel="0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
 
     <div id="valorant">
       <div id="subtitulo-hobbie-val">
-        <img  src="./img/valorant-icon.png" alt="">
+        <img src="./img/valorant-icon.png" alt="" />
         <h2>Valorant Highlights</h2>
-
       </div>
-      
+
       <div id="skye">
         <div class="titulo-clips">
           <h3>skye</h3>
-          <img src="./img/Skye_icon.jpg" alt="">
+          <img src="./img/Skye_icon.jpg" alt="" />
         </div>
-        <iframe src="https://www.youtube.com/embed/tYxpH7ZbCUg" title="skye clip 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+        <iframe
+          src="https://www.youtube.com/embed/tYxpH7ZbCUg"
+          title="skye clip 1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <div id="viper">
         <div class="titulo-clips">
           <h3>viper</h3>
-          <img src="./img/Viper_icon.jpg" alt="">
-
+          <img src="./img/Viper_icon.jpg" alt="" />
         </div>
-        <iframe src="https://www.youtube.com/embed/yECJG6Ft0Z0" title="viper clip 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+        <iframe
+          src="https://www.youtube.com/embed/yECJG6Ft0Z0"
+          title="viper clip 1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
 
     <div id="halo">
       <div id="subtitulo-hobbie-halo">
-        <img src="./img/halo-icon.png" alt="">
+        <img src="./img/halo-icon.png" alt="" />
         <h2>Halo Highlights</h2>
-
       </div>
-      
+
       <div id="halo-clip-1">
         <div class="titulo-clips">
           <h3>Trucos bajo la manga</h3>
-          <img src="./img/ninja-icon.png" alt="">
+          <img src="./img/ninja-icon.png" alt="" />
         </div>
-        <iframe src="https://www.youtube.com/embed/CRvx9PeCgvw" title="halo-clip-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+        <iframe
+          src="https://www.youtube.com/embed/CRvx9PeCgvw"
+          title="halo-clip-1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <div id="halo-clip-2">
         <div class="titulo-clips">
           <h3>El frenesí en persona</h3>
-          <img src="./img/frenzy-icon.png" alt="">
+          <img src="./img/frenzy-icon.png" alt="" />
         </div>
-        <iframe  src="https://www.youtube.com/embed/uepoE0ReBkc" title="Halo clip 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
+        <iframe
+          src="https://www.youtube.com/embed/uepoE0ReBkc"
+          title="Halo clip 2"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
 
