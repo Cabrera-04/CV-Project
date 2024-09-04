@@ -10,10 +10,10 @@ body {
   grid-template-areas:
     "encabezado"
     "sobre-mi"
+    "redes-sociales"
     "academico"
     "habilidades"
     "idiomas"
-    "familia"
     "hobbies"
     "futbol"
     "overwatch"
@@ -36,11 +36,11 @@ body > * {
 header {
   display: flex;
   grid-area: encabezado;
-  justify-content: end;
+  justify-content: center;
   background-color: aqua;
 }
 
-header p {
+header a {
   margin: 30px;
   font-size: 3vh;
 }
@@ -53,6 +53,15 @@ header p {
 
   grid-area: sobre-mi;
 }
+
+
+#profile-picture{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
 
 #about-me > * {
   padding: 1px;
@@ -74,10 +83,58 @@ header p {
   object-fit: cover;
 }
 
+#social-media{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-area: redes-sociales;
+}
+
+#social-media img{
+  height: 100px;
+  width: 100px;
+}
+
+#social-media > div{
+  margin: 10px 50px;
+}
+
+#contact{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 100px;
+}
+
+#contact img{
+  height: 50px;
+  width: 50px;
+}
+
+#wa,#email{
+  display: flex;
+  align-items: center;
+}
+
 /** ACADEMIC **/
 #academic {
-  flex-wrap: wrap;
   grid-area: academico;
+}
+
+#studies{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+#studies-picture{
+  margin: 20px 20px;
+}
+#studies-picture img{
+  height: 200px;
+  width: 400px;
+
 }
 
 /** Subtitulos **/
@@ -87,7 +144,8 @@ header p {
 #valorant h2,
 #halo h2,
 #football h2,
-#languages h2, #hobbies h2 {
+#languages h2,
+#hobbies h2 {
   font-size: 5vh;
   text-align: center;
 }
@@ -102,44 +160,50 @@ h2 img {
   text-align: left;
   margin-bottom: 10px;
 }
-#academic img {
-  height: 600px;
-  width: 600px;
-  border-radius: 50%;
-}
+
 
 /** SKILLS**/
 #skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   grid-area: habilidades;
 }
 
 #skills img {
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
 }
 
 #tech {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 #tech img {
-  margin: 100px;
+  margin: 40px 100px;
 }
 
-#tech img:hover, #can-speak img:hover {
-  transform: scale(1.5);
+
+
+
+#tech img:hover,
+#can-speak img:hover {
+  transform: scale(1.3);
 }
 
-.titulo-clips,
 #subtitulo-futbol {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+
+.titulo-clips{
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+}
+
 
 #subtitulo-hobbie-ow,
 #subtitulo-hobbie-val,
@@ -150,7 +214,21 @@ h2 img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
+  padding: 10px;
+
+}
+
+
+#subtitulo-hobbie-ow{
+  background: linear-gradient(to right,#ff7c09,#1f1d1f);
+}
+
+#subtitulo-hobbie-val{
+  background: linear-gradient(to right,#fa1f1f,#1f1d1f);
+}
+
+#subtitulo-hobbie-halo{
+  background: linear-gradient(to right,#13c004,#1307f8);
 }
 
 #subtitulo-futbol img,
@@ -170,6 +248,10 @@ h2 img {
   flex-wrap: wrap;
 }
 
+#can-speak > div{
+  margin: 5px;
+}
+
 #english,
 #spanish {
   display: flex;
@@ -187,13 +269,12 @@ h2 img {
   width: 80px;
 }
 
-
-
 /** CLIPS **/
 
 iframe {
   height: 50vh;
   width: 80%;
+  margin: 10px;
 }
 #wm {
   background-image: url(../img/wm-picture-1.jpg);
@@ -301,9 +382,7 @@ iframe {
 
 /** Valorant **/
 
-h3 {
-  background-color: aqua;
-}
+
 
 #valorant #subtitulo-hobbie-val {
   grid-area: subtitulo-jugadas-val;
@@ -368,9 +447,10 @@ h3 {
     grid-template-areas:
       "subtitulo-jugadas-halo subtitulo-jugadas-halo "
       "halo-clip-1 halo-clip-2";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
   }
 }
-
 
 /** Carrusel **/
 
@@ -416,11 +496,65 @@ h3 {
   right: 0;
 }
 
-
 .carousel-item img {
   width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
   height: 400px; /* Ajusta este valor según el tamaño que desees */
   object-fit: cover; /* Asegura que la imagen cubra completamente el espacio asignado */
+}
+
+/** Desplegable **/
+
+.menu {
+  background-color: cyan;
+  padding: 10px;
+  text-align: center;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+.menu ul li {
+  position: relative;
+  margin: 0 20px;
+}
+.menu ul li a {
+  text-decoration: none;
+  margin: 30px;
+  font-size: 3vh;
+}
+
+/* Estilos para el desplegable */
+.menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: cyan;
+  padding: 0;
+}
+.menu ul ul li {
+  margin: 0;
+}
+.menu ul ul ul {
+  top: 0;
+  left: 100%;
+  padding: 0;
+}
+
+/* Mostrar desplegable al pasar el ratón */
+.menu ul li:hover > ul {
+  display: block;
+}
+
+/** Tooltip**/
+
+
+/** colour border **/
+
+#tech img:hover {
+  filter: drop-shadow(0px 0px 12px blue);
 }
 
 
