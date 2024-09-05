@@ -306,7 +306,7 @@ h2 img {
 }
 
 #tech img:hover,
-#can-speak img:hover {
+#can-speak img:hover, #social-media img:hover {
   transform: scale(1.3);
 }
 
